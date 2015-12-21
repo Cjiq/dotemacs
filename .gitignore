@@ -2,7 +2,7 @@
 *
 
 # But don't ignore these specific locations.
-!config/
+!config
 !init.el
 
 *~
