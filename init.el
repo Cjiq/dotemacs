@@ -15,6 +15,8 @@
 (require 'init-evil)
 (require 'init-web-mode)
 (require 'color-theme-almost-monokai)
+(require 'init-elpy)
+
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
 (tool-bar-mode -1) ;; Disable toolbar
