@@ -6,7 +6,7 @@
 			package-archives )
 ; list the packages you want
 (setq package-list
-    '(color-theme evil evil-commentary evil-escape evil-leader evil-magit evil-org 
+    '(auto-complete color-theme evil evil-commentary evil-escape evil-leader evil-magit evil-org 
 		   evil-surround evil-tutor flycheck helm magit org php-auto-yasnippets
 		   php-mode powerline powerline-evil web-mode yasnippet))
 
