@@ -13,6 +13,6 @@
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-markup-indent-offset 2))
 ;; Enable web mode for all php files
-(add-to-list 'auto-mode-alist '("\\.php$" . enable-web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.php$" . enable-web-mode))
 
 (provide 'init-web-mode)

@@ -16,7 +16,8 @@
 (require 'init-web-mode)
 (require 'color-theme-almost-monokai)
 (require 'init-elpy)
-
+(require 'init-auto-complete)
+(require 'init-linum)
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
 (tool-bar-mode -1) ;; Disable toolbar
@@ -32,7 +33,10 @@
     (setq visible-bell nil)
     (setq ring-bell-function 'ignore)
 
-
+;; Some line numbers and shit 
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#171819")
+(set-cursor-color "White")
 ;; Keybindings
 (setq mac-option-key-is-meta t) ;; Only use left alt as meta key
 (setq mac-right-option-modifier nil)
