@@ -31,7 +31,7 @@
 (require 'init-evil)
 (require 'init-web-mode)
 (require 'color-theme-almost-monokai)
-(require 'init-elpy)
+;;(require 'init-elpy)
 (require 'init-auto-complete)
 (require 'init-linum)
 ;; General stuff
