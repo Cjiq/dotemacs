@@ -25,6 +25,9 @@
 
 (color-theme-almost-monokai)
 
+;; Only use tabs as indentations
+(setq-default indent-tabs-mode t)
+
 ;; quiet, please! No dinging!
     (setq visible-bell nil)
     (setq ring-bell-function 'ignore)
@@ -33,6 +36,9 @@
 ;; Keybindings
 (setq mac-option-key-is-meta t) ;; Only use left alt as meta key
 (setq mac-right-option-modifier nil)
+
+;;(global-set-key (kbd "C-p") 'helm-find-files)
+(define-key evil-normal-state-map "\C-p" 'helm-find-files)
 
 ;; Magit
 (require 'magit)
