@@ -4,8 +4,24 @@
 	        package-archives )
 (push '("melpa" . "http://melpa.milkbox.net/packages/")
 			package-archives )
+; list the packages you want
+(setq package-list
+    '(color-theme evil evil-commentary evil-escape evil-leader evil-magit evil-org 
+		   evil-surround evil-tutor flycheck helm magit org php-auto-yasnippet
+		   php-mode powerline powerline-evil web-mode yasnippet))
 
+
+; activate all the packages
 (package-initialize)
+
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 ;; Import all config files from /config folder
 (add-to-list 'load-path (concat user-emacs-directory "config"))
