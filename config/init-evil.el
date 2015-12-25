@@ -9,4 +9,15 @@
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
 
+;; Evil-surround 
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
+;; Evil-commentary
+(require 'evil-commentary)
+(evil-commentary-mode)
+
+;; Evil-escape
+(evil-escape-mode)
+
 (provide 'init-evil)
