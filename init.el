@@ -34,6 +34,7 @@
 ;;(require 'init-elpy)
 (require 'init-auto-complete)
 (require 'init-linum)
+(require 'init-org)
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
 (tool-bar-mode -1) ;; Disable toolbar
