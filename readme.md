@@ -1,7 +1,10 @@
 # dotemacs
 
 This is my official emacs config. It makes use of evil to add some of the
-smart fuctionality you get from vim.
+smart fuctionality that you get from vim. 
+
+Credits to [aaronbieber](https://github.com/aaronbieber) and [bling](https://github.com/bling) for insperation and for providing
+awesome config examples
 
 ## Installation
 
