@@ -14,7 +14,7 @@ smart fuctionality you get from vim.
 1.  Then move contents to .emacs.d/ directory
 
     ```sh
-    cp -R dotemacs/* ~/.emacs.d/
+    cp -r dotemacs/* ~/.emacs.d/
     ```
 
 1.  Finally symlink init.el to .emacs
