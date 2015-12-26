@@ -23,6 +23,9 @@ smart fuctionality you get from vim.
     ln -s ~/.emacs.d/init.el ~/.emacs
     ```
 
+1.  Done! The next time you launch emacs it will start to download 
+    any missing packages.
+
 ## License
 
 MIT
