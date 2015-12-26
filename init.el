@@ -41,8 +41,9 @@
 (scroll-bar-mode -1) ;; Disable scrollbars
 (setq ns-use-srgb-colorspace nil) ;; Fix sRGB colors
 
-(color-theme-almost-monokai)
+(color-theme-almost-monokai) ;; use this color theme
 
+(setq default-frame-alist '((cursor-color . "white"))) ;; use a white cursor
 ;; Only use tabs as indentations
 (setq-default indent-tabs-mode t)
 
