@@ -21,6 +21,6 @@
 (evil-escape-mode)
 
 ;; Evil-org-mode
-('require 'evil-org)
+(require 'evil-org)
 
 (provide 'init-evil)
