@@ -35,6 +35,7 @@
 (require 'init-auto-complete)
 (require 'init-linum)
 (require 'init-org)
+(require 'init-arduino-mode)
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
 (tool-bar-mode -1) ;; Disable toolbar
@@ -44,6 +45,15 @@
 (color-theme-almost-monokai) ;; use this color theme
 
 (setq default-frame-alist '((cursor-color . "white"))) ;; use a white cursor
+
+;; Enable paren to show matching braces
+(require 'paren)
+    (set-face-background 'show-paren-match "#D9D9D9")
+    (set-face-foreground 'show-paren-match "#000")
+    (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
+(setq show-paren-delay 0)
+(show-paren-mode 1)
+
 ;; Only use tabs as indentations
 (setq-default indent-tabs-mode t)
 
