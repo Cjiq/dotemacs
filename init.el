@@ -26,6 +26,9 @@
 ;; Import all config files from /config folder
 (add-to-list 'load-path (concat user-emacs-directory "config"))
 
+;; Magit
+;; (require 'magit)
+;; (global-set-key (kbd "C-x g") 'magit-status)
 
 (require 'init-powerline)
 (require 'init-evil)
@@ -83,9 +86,6 @@
 ;;(global-set-key (kbd "C-p") 'helm-find-files)
 (define-key evil-normal-state-map "\C-p" 'helm-find-files)
 
-;; Magit
-(require 'magit)
-(global-set-key (kbd "C-x g") 'magit-status)
 
 
 
