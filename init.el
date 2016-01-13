@@ -39,6 +39,7 @@
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
 (tool-bar-mode -1) ;; Disable toolbar
+(menu-bar-mode -1) ;; Disable menubar
 (scroll-bar-mode -1) ;; Disable scrollbars
 (setq ns-use-srgb-colorspace nil) ;; Fix sRGB colors
 
