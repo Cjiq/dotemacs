@@ -24,6 +24,13 @@
 ;; Evil-org-mode
 (require 'evil-org)
 
+;; Evil-leader
+(require 'evil-leader)
+(global-evil-leader-mode t)
+(evil-leader/set-leader ",")
+
+;; Evil-magit
+(require 'evil-magit)
 
 ;; Evil-visualstar
 (require 'evil-visualstar)
