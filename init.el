@@ -6,7 +6,7 @@
 			package-archives )
 ; list the packages you want
 (setq package-list
-    '(auto-complete color-theme evil evil-commentary evil-escape evil-leader evil-magit evil-org 
+    '(auto-complete neotree color-theme evil evil-commentary evil-escape evil-leader evil-magit evil-org evil-visualstar 
 		   evil-surround evil-tutor flycheck helm magit org php-auto-yasnippets
 		   php-mode powerline powerline-evil web-mode yasnippet))
 
@@ -35,7 +35,7 @@
 (require 'init-auto-complete)
 (require 'init-linum)
 (require 'init-org)
-(require 'init-arduino-mode)
+;; (require 'init-arduino-mode)
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
 (tool-bar-mode -1) ;; Disable toolbar
@@ -48,15 +48,15 @@
 
 ;; Enable paren to show matching braces
 (require 'paren)
-    (set-face-background 'show-paren-match "#D9D9D9")
+    (set-face-background 'show-paren-match "#FCE111")
     (set-face-foreground 'show-paren-match "#000")
     (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 (setq show-paren-delay 0)
 (show-paren-mode 1)
 
 ;; Only use tabs as indentations
-(setq-default indent-tabs-mode t)
-
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
 ;; quiet, please! No dinging!
     (setq visible-bell nil)
     (setq ring-bell-function 'ignore)
@@ -65,6 +65,16 @@
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#171819")
 (set-cursor-color "White")
+
+;; Make is possible to save windows layouts
+(require 'desktop)
+(setq desktop-path (list "~/emacs-server"))
+(desktop-save-mode 1)
+
+
+
+
+
 ;; Keybindings
 (setq mac-option-key-is-meta t) ;; Only use left alt as meta key
 (setq mac-right-option-modifier nil)

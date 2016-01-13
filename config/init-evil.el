@@ -18,9 +18,24 @@
 (evil-commentary-mode)
 
 ;; Evil-escape
+(setq-default evil-escape-key-sequence ",,")
 (evil-escape-mode)
 
 ;; Evil-org-mode
 (require 'evil-org)
+
+
+;; Evil-visualstar
+(require 'evil-visualstar)
+(global-evil-visualstar-mode t)
+(setq evil-visualstar/persistent t) 
+
+;; add neotree support
+ (add-hook 'neotree-mode-hook
+            (lambda ()
+              (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+              (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
 (provide 'init-evil)
