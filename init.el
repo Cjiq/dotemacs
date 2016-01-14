@@ -4,12 +4,20 @@
 	        package-archives )
 (push '("melpa" . "http://melpa.milkbox.net/packages/")
 			package-archives )
-; list the packages you want
-(setq package-list
-    '(auto-complete neotree color-theme evil evil-commentary evil-escape evil-leader evil-magit evil-org evil-visualstar 
-		   evil-surround evil-tutor flycheck helm magit org php-auto-yasnippets
-		   php-mode powerline powerline-evil web-mode yasnippet))
+(defun slurp (f)
+         (with-temp-buffer
+           (insert-file-contents f)
+           (buffer-substring-no-properties
+            (point-min)
+            (point-max))))
 
+; list the packages you want
+(setq package-list '())
+;; Loop through package-list.el and add all packages
+;; to package-list var, one package per line.
+(dolist (el (split-string
+		(slurp "~/.emacs.d/config/package-list.el") "\n" t))
+(push (intern el) package-list))
 
 ; activate all the packages
 (package-initialize)
@@ -27,8 +35,8 @@
 (add-to-list 'load-path (concat user-emacs-directory "config"))
 
 ;; Magit
-;; (require 'magit)
-;; (global-set-key (kbd "C-x g") 'magit-status)
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (require 'init-powerline)
 (require 'init-evil)

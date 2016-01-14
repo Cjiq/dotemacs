@@ -30,7 +30,7 @@
 (evil-leader/set-leader ",")
 
 ;; Evil-magit
-;; (require 'evil-magit)
+(require 'evil-magit)
 
 ;; Evil-visualstar
 (require 'evil-visualstar)
