@@ -94,30 +94,3 @@
 ;;(global-set-key (kbd "C-p") 'helm-find-files)
 (define-key evil-normal-state-map "\C-p" 'helm-find-files)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("51277c9add74612c7624a276e1ee3c7d89b2f38b1609eed6759965f9d4254369" "e87a2bd5abc8448f8676365692e908b709b93f2d3869c42a4371223aab7d9cf8" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
