@@ -83,10 +83,15 @@
 (setq desktop-path (list "~/emacs-server"))
 (desktop-save-mode 1)
 
+;; neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq neo-smart-open t)
+(setq neo-theme 'ascii)
 
-
-
-
+;; Rainbow colors
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook #'rainbow-mode)
 ;; Keybindings
 (setq mac-option-key-is-meta t) ;; Only use left alt as meta key
 (setq mac-right-option-modifier nil)
