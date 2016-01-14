@@ -1,0 +1,37 @@
+#+OPTIONS: toc:nil
+* dotemacs 
+This is my official emacs config. It makes use of evil to add some of the
+smart fuctionality that you get from vim. 
+
+Credits to [[https://github.com/aaronbieber][aaronbieber]] and [[https://github.com/bling][bling]] for insperation and for providing
+awesome config examples
+** Installation
+1. Begin with installing emacs and then clone this repo.
+*** OSX 
+Just install emacs with Homebrew and then clone this repo into your `~/.emacs.d/` folder. 
+#+BEGIN_SRC sh
+```sh
+brew install --with-cocoa emacs
+git clone https://github.com/Cjiq/dotemacs ~/.emacs.d/
+```
+#+END_SRC
+*** GNU/Linux
+Using Arch Linux use pacman to install emacs
+#+BEGIN_SRC sh
+```sh
+sudo pacman -S emacs
+git clone https://github.com/Cjiq/dotemacs ~/.emacs.d/
+```
+#+END_SRC
+For distributions using apt-get
+#+BEGIN_SRC sh
+```sh
+sudo apt-get install emacs
+git clone https://github.com/Cjiq/dotemacs ~/.emacs.d/
+```
+#+END_SRC
+*** DISCLAIMER!  
+Bear in mind this might overwrite your current emacs config
+2. Done! The next time you launch emacs it will start to download any missing packages.
+** License
+  MIT

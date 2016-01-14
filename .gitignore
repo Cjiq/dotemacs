@@ -6,6 +6,7 @@
 !config/*
 !init.el
 !*.md
+!*.org
 *~
 \#*\#
 /.emacs.desktop
