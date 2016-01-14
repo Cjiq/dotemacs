@@ -21,3 +21,5 @@ powerline
 powerline-evil
 web-mode
 yasnippet
+rainbow
+rainbow-delimiters
