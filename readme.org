@@ -19,7 +19,7 @@ Begin with installing emacs and then clone this repo.
    sudo pacman -S emacs
    git clone https://github.com/Cjiq/dotemacs ~/.emacs.d/
    #+END_SRC
-   For distributions using apt-get, installand then clone this repo into your =~/.emacs.d/= folder.
+   For distributions using apt-get, install and then clone this repo into your =~/.emacs.d/= folder.
    #+BEGIN_SRC sh
    sudo apt-get install emacs
    git clone https://github.com/Cjiq/dotemacs ~/.emacs.d/
