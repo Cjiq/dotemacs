@@ -38,15 +38,17 @@
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
-(require 'init-powerline)
-(require 'init-evil)
-(require 'init-web-mode)
 (require 'color-theme-almost-monokai)
-;;(require 'init-elpy)
 (require 'init-auto-complete)
+(require 'init-c-modes)
+(require 'init-evil)
+(require 'init-gtags)
 (require 'init-linum)
 (require 'init-org)
-(require 'init-c-modes)
+(require 'init-powerline)
+(require 'init-web-mode)
+(require 'functions)
+;;(require 'init-elpy)
 ;; (require 'init-arduino-mode)
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
@@ -100,3 +102,14 @@
 ;;(global-set-key (kbd "C-p") 'helm-find-files)
 (define-key evil-normal-state-map "\C-p" 'helm-find-files)
 
+;; evil-leader bindings
+(evil-leader/set-key "o" 'switch-to-previous-buffer)
+(evil-leader/set-key "sol" 'sort-lines)
+(evil-leader/set-key "ref" 'rename-file-and-buffer)
+(evil-leader/set-key "lf" 'load-file)
+
+;; usefull functions
+1
+2
+3
+4
