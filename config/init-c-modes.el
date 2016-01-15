@@ -7,3 +7,5 @@
               indent-tabs-mode nil)
 (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 (add-to-list 'auto-mode-alist '("\\.hps\\" . c++-mode))
+
+(provide 'c-modes)

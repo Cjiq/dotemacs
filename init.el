@@ -46,6 +46,7 @@
 (require 'init-auto-complete)
 (require 'init-linum)
 (require 'init-org)
+(require 'init-c-modes)
 ;; (require 'init-arduino-mode)
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
