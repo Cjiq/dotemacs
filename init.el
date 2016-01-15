@@ -1,22 +1,22 @@
 ;; Package control
 (require 'package)
 (push '("marmalade" . "http://marmalade-repo.org/packages/")
-	        package-archives )
+  package-archives )
 (push '("melpa" . "http://melpa.milkbox.net/packages/")
-			package-archives )
+	package-archives )
 (defun slurp (f)
-         (with-temp-buffer
-           (insert-file-contents f)
-           (buffer-substring-no-properties
-            (point-min)
-            (point-max))))
+  (with-temp-buffer
+    (insert-file-contents f)
+    (buffer-substring-no-properties
+      (point-min)
+      (point-max))))
 
 ; list the packages you want
 (setq package-list '())
 ;; Loop through package-list.el and add all packages
 ;; to package-list var, one package per line.
 (dolist (el (split-string
-		(slurp "~/.emacs.d/config/package-list.el") "\n" t))
+	(slurp "~/.emacs.d/config/package-list.el") "\n" t))
 (push (intern el) package-list))
 
 ; activate all the packages
@@ -39,6 +39,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (require 'color-theme-almost-monokai)
+(require 'functions)
 (require 'init-auto-complete)
 (require 'init-c-modes)
 (require 'init-evil)
@@ -47,7 +48,6 @@
 (require 'init-org)
 (require 'init-powerline)
 (require 'init-web-mode)
-(require 'functions)
 ;;(require 'init-elpy)
 ;; (require 'init-arduino-mode)
 ;; General stuff
@@ -63,10 +63,10 @@
 
 ;; Enable paren to show matching braces
 (require 'paren)
-    (set-face-background 'show-paren-match "#FCE111")
-    (set-face-foreground 'show-paren-match "#000")
-    (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
-(setq show-paren-delay 0)
+  (set-face-background 'show-paren-match "#FCE111")
+  (set-face-foreground 'show-paren-match "#000")
+  (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
+(setq show-paren-delay 0.2)
 (show-paren-mode 1)
 
 ;; Only use tabs as indentations
@@ -103,14 +103,14 @@
 (define-key evil-normal-state-map "\C-p" 'helm-find-files)
 
 ;; evil-leader bindings
-(evil-leader/set-key "o" 'switch-to-previous-buffer)
-(evil-leader/set-key "sol" 'sort-lines)
-(evil-leader/set-key "ref" 'rename-file-and-buffer)
-(evil-leader/set-key "lf" 'load-file)
-(evil-leader/set-key "reg" 'gtags-reindex)
-(evil-leader/set-key "gft" 'gtags-find-tag)
-(evil-leader/set-key "gff" 'gtags-find-file)
-
+(evil-leader/set-key
+  "o" 'switch-to-previous-buffer
+  "sol" 'sort-lines
+  "ref" 'rename-file-and-buffer
+  "lf" 'load-file
+  "reg" 'gtags-reindex
+  "gft" 'gtags-find-tag
+  "gff" 'gtags-find-file)
 ;; usefull functions
 1
 2
