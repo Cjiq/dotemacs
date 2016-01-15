@@ -79,10 +79,10 @@
 (set-face-background 'hl-line "#171819")
 (set-cursor-color "White")
 
-;; Make is possible to save windows layouts
-(require 'desktop)
-(setq desktop-path (list "~/emacs-server"))
-(desktop-save-mode 1)
+;; ;; Make is possible to save windows layouts
+;; (require 'desktop)
+;; (setq desktop-path (list "~/emacs-server"))
+;; (desktop-save-mode 1)
 
 ;; neotree
 (require 'neotree)
