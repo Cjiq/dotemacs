@@ -107,6 +107,9 @@
 (evil-leader/set-key "sol" 'sort-lines)
 (evil-leader/set-key "ref" 'rename-file-and-buffer)
 (evil-leader/set-key "lf" 'load-file)
+(evil-leader/set-key "reg" 'gtags-reindex)
+(evil-leader/set-key "gft" 'gtags-find-tag)
+(evil-leader/set-key "gff" 'gtags-find-file)
 
 ;; usefull functions
 1
