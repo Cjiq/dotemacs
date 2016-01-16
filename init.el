@@ -1,9 +1,23 @@
+;;; init.el -- My Emacs configuration
+;-*-Emacs-Lisp-*-
+
+;;; Commentary:
+;;
+;; This is my official Emacs config.  It makes use of evil to add some of the
+;; smart fuctionality that you get from vim. 
+;; Credits to https://github.com/aaronbieber and https://github.com/bling
+;; for insperation and for providing awesome config examples.
+;;
+;;; Code:
+
 ;; Package control
 (require 'package)
 (push '("marmalade" . "http://marmalade-repo.org/packages/")
   package-archives )
 (push '("melpa" . "http://melpa.milkbox.net/packages/")
 	package-archives )
+
+; Function to return all lines in file
 (defun slurp (f)
   (with-temp-buffer
     (insert-file-contents f)
@@ -12,7 +26,7 @@
       (point-max))))
 
 ; list the packages you want
-(setq package-list '())
+(defvar package-list '())
 ;; Loop through package-list.el and add all packages
 ;; to package-list var, one package per line.
 (dolist (el (split-string
@@ -38,6 +52,7 @@
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
+(require 'bindings)
 (require 'color-theme-almost-monokai)
 (require 'functions)
 (require 'init-auto-complete)
@@ -96,21 +111,6 @@
 ;; Rainbow colors
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook #'rainbow-mode)
-;; Keybindings
-(setq mac-option-key-is-meta t) ;; Only use left alt as meta key
-(setq mac-right-option-modifier nil)
 
-;;(global-set-key (kbd "C-p") 'helm-find-files)
-(define-key evil-normal-state-map "\C-p" 'helm-find-files)
-
-;; evil-leader bindings
-(evil-leader/set-key
-  "o" 'switch-to-previous-buffer
-  "nH" 'neotree-hidden-file-toggle
-  "nn" 'neotree-create-node
-  "sl" 'sort-lines
-  "rf" 'rename-file-and-buffer
-  "lf" 'load-file
-  "gre" 'gtags-reindex
-  "gft" 'gtags-find-tag
-  "gff" 'gtags-find-file)
+(provide 'init)
+;;; init ends here
