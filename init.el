@@ -105,14 +105,10 @@
 ;; evil-leader bindings
 (evil-leader/set-key
   "o" 'switch-to-previous-buffer
+  "nH" 'neotree-hidden-file-toggle
   "sol" 'sort-lines
   "ref" 'rename-file-and-buffer
   "lf" 'load-file
-  "reg" 'gtags-reindex
+  "gre" 'gtags-reindex
   "gft" 'gtags-find-tag
   "gff" 'gtags-find-file)
-;; usefull functions
-1
-2
-3
-4
