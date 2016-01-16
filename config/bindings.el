@@ -23,7 +23,8 @@
   "lf" 'load-file
   "gre" 'gtags-reindex
   "gft" 'gtags-find-tag
-  "gff" 'gtags-find-file)
-
+  "gff" 'gtags-find-file
+  "wm" 'enable-web-mode)
+;; other bindings
 (provide 'bindings)
 ;;; bindings.el ends here
