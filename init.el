@@ -52,7 +52,7 @@
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
-(require 'bindings)
+
 (require 'color-theme-almost-monokai)
 (require 'functions)
 (require 'init-auto-complete)
@@ -64,6 +64,7 @@
 (require 'init-org)
 (require 'init-powerline)
 (require 'init-web-mode)
+(require 'bindings)
 ;;(require 'init-elpy)
 ;; (require 'init-arduino-mode)
 ;; General stuff
