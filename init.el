@@ -43,6 +43,7 @@
 (require 'init-auto-complete)
 (require 'init-c-modes)
 (require 'init-evil)
+(require 'init-flycheck)
 (require 'init-gtags)
 (require 'init-linum)
 (require 'init-org)
@@ -106,8 +107,9 @@
 (evil-leader/set-key
   "o" 'switch-to-previous-buffer
   "nH" 'neotree-hidden-file-toggle
-  "sol" 'sort-lines
-  "ref" 'rename-file-and-buffer
+  "nn" 'neotree-create-node
+  "sl" 'sort-lines
+  "rf" 'rename-file-and-buffer
   "lf" 'load-file
   "gre" 'gtags-reindex
   "gft" 'gtags-find-tag
