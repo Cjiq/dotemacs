@@ -1,4 +1,10 @@
-;; code goes here
+;;; init-web.el -- My web config
+;;
+;;; Commentary:
+;;  Config file for web development stuff.
+;;
+;;; Code:
+
 (defun enable-web-mode()
   (interactive)
   ;; enable web mode
@@ -25,4 +31,4 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . enable-web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . enable-web-mode))
 (provide 'init-web-mode)
-;;; init-web-mode.el ends here
+;;; init-web.el ends here
