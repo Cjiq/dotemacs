@@ -18,6 +18,7 @@
   "o" 'switch-to-previous-buffer
   "nH" 'neotree-hidden-file-toggle
   "nn" 'neotree-create-node
+  "nd" 'neotree-delete-node
   "sl" 'sort-lines
   "rf" 'rename-file-and-buffer
   "lf" 'load-file
