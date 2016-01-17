@@ -1,3 +1,9 @@
+;;; init-gtags.el -- Gtags config file
+;;-*-Emacs-lisp-*-
+;;; Commentary:
+;;
+;;  Config file for gtags and such.
+;;
 ;;code goes here
 
 (require 'gtags)
@@ -28,3 +34,4 @@
       (bpr-spawn "global -uv")))
 
 (provide 'init-gtags)
+;;; init-gtags.el ends here

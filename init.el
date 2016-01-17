@@ -48,6 +48,14 @@
 ;; Import all config files from /config folder
 (add-to-list 'load-path (concat user-emacs-directory "config"))
 
+;; Handle Emacs backups
+(setq backup-directory-alist '(("." . "~/.emacs-saves.d/"))) ;; use seperate dir
+(setq backup-by-copying t)
+(setq delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)
+
 ;; Magit
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
