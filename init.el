@@ -71,7 +71,7 @@
 (require 'init-linum)
 (require 'init-org)
 (require 'init-powerline)
-(require 'init-web-mode)
+(require 'init-web)
 (require 'bindings)
 ;;(require 'init-elpy)
 ;; (require 'init-arduino-mode)
