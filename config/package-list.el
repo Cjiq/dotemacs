@@ -1,6 +1,7 @@
 auto-complete
 bpr
 color-theme
+exec-path-from-shell
 evil
 evil-commentary
 evil-escape

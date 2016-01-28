@@ -23,6 +23,7 @@
   "rf" 'rename-file-and-buffer
   "lf" 'load-file
   "gre" 'gtags-reindex
+  "co" 'org-cycle-list-bullet
   "gft" 'gtags-find-tag
   "gff" 'gtags-find-file
   "wm" 'enable-web-mode)

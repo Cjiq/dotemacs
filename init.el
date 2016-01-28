@@ -10,6 +10,7 @@
 ;;
 ;;; Code:
 
+
 ;; Package control
 (require 'package)
 (push '("marmalade" . "http://marmalade-repo.org/packages/")
@@ -45,6 +46,13 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+;; Export useful shell variables
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+(require 'exec-path-from-shell)
+(exec-path-from-shell-copy-env "SSH_AGENT_PID")
+(exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
+
 ;; Import all config files from /config folder
 (add-to-list 'load-path (concat user-emacs-directory "config"))
 
@@ -72,6 +80,7 @@
 (require 'init-org)
 (require 'init-powerline)
 (require 'init-web)
+(require 'init-spelling)
 (require 'bindings)
 ;;(require 'init-elpy)
 ;; (require 'init-arduino-mode)
@@ -121,5 +130,8 @@
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook #'rainbow-mode)
 
+;; Hooks
+(add-hook 'sh-mode-hook (lambda () (setq sh-basic-offset 2
+                                         indent-tabs-mode t)))
 (provide 'init)
 ;;; init ends here
