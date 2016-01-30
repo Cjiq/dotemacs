@@ -13,6 +13,9 @@
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
+;; Evil-serach
+(setq evil-search-module 'evil-search)
+
 ;; Evil-commentary
 (require 'evil-commentary)
 (evil-commentary-mode)
