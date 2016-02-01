@@ -6,6 +6,8 @@ evil
 evil-commentary
 evil-escape
 evil-indent-plus
+emmet-mode
+helm-emmet
 evil-leader
 evil-magit
 evil-org

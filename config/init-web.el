@@ -5,10 +5,15 @@
 ;;
 ;;; Code:
 
+(require 'emmet-mode)
+
 (defun enable-web-mode()
   (interactive)
   ;; enable web mode
   (web-mode)
+
+  ;; enable emmet mode
+  (emmet-mode)
 
   ;; make these variables local
   (make-local-variable 'web-mode-code-indent-offset)
