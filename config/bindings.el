@@ -11,7 +11,7 @@
 (setq mac-option-key-is-meta t) ;; Only use left alt as meta key
 (setq mac-right-option-modifier nil)
 
-(define-key evil-normal-state-map "\C-p" 'helm-find-files)
+(define-key evil-normal-state-map "\C-p" 'helm-for-files)
 
 ;; evil-leader bindings
 (evil-leader/set-key
