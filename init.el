@@ -84,6 +84,7 @@
 (require 'bindings)
 ;;(require 'init-elpy)
 ;; (require 'init-arduino-mode)
+
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
 (tool-bar-mode -1) ;; Disable toolbar
@@ -92,8 +93,14 @@
 (setq ns-use-srgb-colorspace nil) ;; Fix sRGB colors
 
 (color-theme-almost-monokai) ;; use this color theme
+(setq default-frame-alist ;; Fix colors for new frames
+      (append default-frame-alist
+       '((foreground-color . "#272821")
+ (background-color . "#F8F8F2")
+ )))
+(add-to-list 'default-frame-alist 
+ '(cursor-color . "#FFF"))
 
-(setq default-frame-alist '((cursor-color . "white"))) ;; use a white cursor
 
 ;; Enable paren to show matching braces
 (require 'paren)

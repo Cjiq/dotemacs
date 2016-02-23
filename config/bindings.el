@@ -28,5 +28,6 @@
   "gff" 'gtags-find-file
   "wm" 'enable-web-mode)
 ;; other bindings
+(global-set-key "\M-`" 'other-frame) ;; Cycle through frames with Meta-`
 (provide 'bindings)
 ;;; bindings.el ends here
