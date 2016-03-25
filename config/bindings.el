@@ -15,17 +15,18 @@
 
 ;; evil-leader bindings
 (evil-leader/set-key
-  "o" 'switch-to-previous-buffer
-  "nH" 'neotree-hidden-file-toggle
-  "nn" 'neotree-create-node
-  "nd" 'neotree-delete-node
-  "sl" 'sort-lines
-  "rf" 'rename-file-and-buffer
-  "lf" 'load-file
-  "gre" 'gtags-reindex
   "co" 'org-cycle-list-bullet
-  "gft" 'gtags-find-tag
   "gff" 'gtags-find-file
+  "gft" 'gtags-find-tag
+  "gre" 'gtags-reindex
+  "ib" 'indent-buffer
+  "lf" 'load-file
+  "nH" 'neotree-hidden-file-toggle
+  "nd" 'neotree-delete-node
+  "nn" 'neotree-create-node
+  "o" 'switch-to-previous-buffer
+  "rf" 'rename-file-and-buffer
+  "sl" 'sort-lines
   "wm" 'enable-web-mode)
 ;; other bindings
 (global-set-key "\M-`" 'other-frame) ;; Cycle through frames with Meta-`

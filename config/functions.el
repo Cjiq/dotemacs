@@ -1,4 +1,12 @@
-;; useful functions goes here
+;;; functions.el -- My Emacs helpful functions
+;-*-Emacs-Lisp-*-
+
+;;; Commentary:
+;;
+;;  Nothing more to be said.
+;;
+;;; Code:
+
 (defun switch-to-previous-buffer ()
   "Switch to previously open buffer.
 Repeated invocations toggle between the two most recently open buffers."
@@ -19,5 +27,14 @@ Repeated invocations toggle between the two most recently open buffers."
           (rename-buffer new-name)
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil))))))
+(defun indent-buffer ()
+  "Indent an entire buffer using the default intenting scheme."
+  (interactive)
+  (point-to-register 'o)
+  (delete-trailing-whitespace)
+  (indent-region (point-min) (point-max) nil)
+  (untabify (point-min) (point-max))
+  (jump-to-register 'o))
 
 (provide 'functions)
+;;; functions.el ends here
