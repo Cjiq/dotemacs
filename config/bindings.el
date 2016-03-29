@@ -27,6 +27,7 @@
   "o" 'switch-to-previous-buffer
   "rf" 'rename-file-and-buffer
   "sl" 'sort-lines
+  "ss" 'sudo-save
   "wm" 'enable-web-mode)
 ;; other bindings
 (global-set-key "\M-`" 'other-frame) ;; Cycle through frames with Meta-`

@@ -36,5 +36,12 @@ Repeated invocations toggle between the two most recently open buffers."
   (untabify (point-min) (point-max))
   (jump-to-register 'o))
 
+(defun sudo-save ()
+  "Save file with sudo permissions."
+  (interactive)
+  (if (not buffer-file-name)
+      (write-file (concat "/sudo:root@localhost:" (ido-read-file-name "File:")))
+    (write-file (concat "/sudo:root@localhost:" buffer-file-name))))
+
 (provide 'functions)
 ;;; functions.el ends here
