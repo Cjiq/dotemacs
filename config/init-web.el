@@ -35,5 +35,6 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . enable-web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . enable-web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . enable-web-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . enable-web-mode))
 (provide 'init-web)
 ;;; init-web.el ends here

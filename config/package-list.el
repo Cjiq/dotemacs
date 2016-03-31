@@ -16,6 +16,7 @@ evil-tutor
 evil-visualstar
 flycheck
 gtags
+gist
 helm
 magit
 neotree

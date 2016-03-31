@@ -43,5 +43,24 @@ Repeated invocations toggle between the two most recently open buffers."
       (write-file (concat "/sudo:root@localhost:" (ido-read-file-name "File:")))
     (write-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
+(defun ssh-connect (ssh_user ssh_host ssh_loc)
+  "Find file over ssh.  E.g. SSH_USER@SSH_HOST:SSH_LOC."
+  (interactive
+   (list
+    (read-string "User: ")
+    (read-string "Host (example.tk#port): ")
+    (read-string "File: ")))
+  (find-file (concat "/ssh:" ssh_user "@" ssh_host ":" ssh_loc)))
+
+(defun ssh-connect-cjiq ()
+  "Connect to cjiq.tk as cjiq via ssh."
+  (interactive)
+  (find-file "/ssh:cjiq@cjiq.tk#35:welcome.txt"))
+
+(defun ssh-connect-web ()
+  "Connect to cjiq.tk as web via ssh."
+  (interactive)
+  (find-file "/ssh:web@cjiq.tk#35:welcome.txt"))
+
 (provide 'functions)
 ;;; functions.el ends here

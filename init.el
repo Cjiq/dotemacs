@@ -85,6 +85,9 @@
 ;;(require 'init-elpy)
 ;; (require 'init-arduino-mode)
 
+;; (require 'gist)
+
+
 ;; General stuff
 (setq inhibit-startup-message t) ;; Disable splash screen
 (tool-bar-mode -1) ;; Disable toolbar
