@@ -62,5 +62,10 @@ Repeated invocations toggle between the two most recently open buffers."
   (interactive)
   (find-file "/ssh:web@cjiq.tk#35:welcome.txt"))
 
+(defun ssh-connect-sb ()
+  "Connect to cjiq.tk sb as cjiq via ssh."
+  (interactive)
+  (find-file "/ssh:cjiq@cjiq.tk#35|ssh:cjiq@192.168.1.149:python/sb-log.py"))
+
 (provide 'functions)
 ;;; functions.el ends here
