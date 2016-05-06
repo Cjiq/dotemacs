@@ -26,6 +26,7 @@
                ("\\section{%s}" . "\\section*{%s}")))
 (setq org-latex-to-pdf-process '("texi2dvi --pdf --clean --verbose --batch %f"))
 (setq org-latex-create-formula-image-program 'dvipng)
+(setq org-export-latex-listings t)
 (add-to-list 'org-latex-classes
           '("article-class"
              "\\documentclass{article}
@@ -44,6 +45,18 @@
               \\usepackage{amssymb}
               \\usepackage{pdftexcmds}
              "
+           ("\\section{%s}" . "\\section*{%s}")
+           ("\\subsection{%s}" . "\\subsection*{%s}")
+           ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+           ("\\paragraph{%s}" . "\\paragraph*{%s}")
+           ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(add-to-list 'org-latex-classes
+          '("report-class"
+                "\\documentclass{/Users/Cjiq/.emacs.d/config/latex-report}
+                [NO-DEFAULT-PACKAGES]
+                [PACKAGES]
+                [EXTRA]
+                "
            ("\\section{%s}" . "\\section*{%s}")
            ("\\subsection{%s}" . "\\subsection*{%s}")
            ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
