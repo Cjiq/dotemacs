@@ -141,7 +141,9 @@
 (add-hook 'prog-mode-hook #'rainbow-mode)
 
 ;; Hooks
-(add-hook 'sh-mode-hook (lambda () (setq sh-basic-offset 2
-                                         indent-tabs-mode t)))
+(add-hook 'sh-mode-hook (lambda () ;; shell script tab width
+   (setq sh-basic-offset 2)))
+(add-hook 'python-mode-hook '(lambda () ;; python tab width
+   (setq python-indent 2)))
 (provide 'init)
 ;;; init ends here

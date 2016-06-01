@@ -27,6 +27,8 @@
   "o" 'switch-to-previous-buffer
   "rf" 'rename-file-and-buffer
   "sl" 'sort-lines
+  "ii" 'increment-number-decimal
+  "di" 'decrement-number-decimal
   "ss" 'sudo-save
   "wm" 'enable-web-mode)
 ;; other bindings
