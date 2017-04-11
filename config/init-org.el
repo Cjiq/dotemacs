@@ -62,5 +62,11 @@
            ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
            ("\\paragraph{%s}" . "\\paragraph*{%s}")
            ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+;; ox-reveal
+(require 'ox-reveal)
+(setq org-reveal-root "file:///home/cjiq/org/reveal.js")
+;; ox-twbs
+(require 'ox-twbs)
+
 (provide 'init-org)
 ;;; init-org.el ends here
