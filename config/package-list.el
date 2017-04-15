@@ -21,6 +21,7 @@ helm
 magit
 neotree
 org
+ox-twbs
 php-auto-yasnippets
 php-mode
 powerline
@@ -29,3 +30,4 @@ rainbow-delimiters
 rainbow-mode
 web-mode
 yasnippet
+monokai-theme

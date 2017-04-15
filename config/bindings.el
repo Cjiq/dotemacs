@@ -16,19 +16,21 @@
 ;; evil-leader bindings
 (evil-leader/set-key
   "co" 'org-cycle-list-bullet
+  "di" 'decrement-number-decimal
+  "fof" 'ff-find-other-file
   "gff" 'gtags-find-file
   "gft" 'gtags-find-tag
   "gre" 'gtags-reindex
   "ib" 'indent-buffer
+  "ii" 'increment-number-decimal
   "lf" 'load-file
   "nH" 'neotree-hidden-file-toggle
   "nd" 'neotree-delete-node
   "nn" 'neotree-create-node
   "o" 'switch-to-previous-buffer
+  "rb" 'revert-buffer
   "rf" 'rename-file-and-buffer
   "sl" 'sort-lines
-  "ii" 'increment-number-decimal
-  "di" 'decrement-number-decimal
   "ss" 'sudo-save
   "wm" 'enable-web-mode)
 ;; other bindings

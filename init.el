@@ -69,7 +69,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 
-(require 'color-theme-almost-monokai)
+(require 'init-theme)
 (require 'functions)
 (require 'init-auto-complete)
 (require 'init-c-modes)
@@ -95,7 +95,6 @@
 (scroll-bar-mode -1) ;; Disable scrollbars
 (setq ns-use-srgb-colorspace nil) ;; Fix sRGB colors
 
-(color-theme-almost-monokai) ;; use this color theme
 (setq default-frame-alist ;; Fix colors for new frames
       (append default-frame-alist
        '((foreground-color . "#272821")
@@ -145,5 +144,13 @@
    (setq sh-basic-offset 2)))
 (add-hook 'python-mode-hook '(lambda () ;; python tab width
    (setq python-indent 2)))
+;; (add-hook 'c++-mode-hook
+;;           (lambda () (setq flycheck-clang-include-path
+;;                            (list (expand-file-name "/Applications/Arduino.app/Contents/Java/hardware/"))))
+          ;; )
+;(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+
+
 (provide 'init)
 ;;; init ends here
