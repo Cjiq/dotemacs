@@ -36,5 +36,9 @@
 (add-hook 'linum-before-numbering-hook 'my-linum-get-format-string)
 (global-linum-mode 1)
 (set-fringe-mode '(0 . 1)) ;; remove left fringe
+
+;; Fix number font size
+(eval-after-load "linum"
+				   '(set-face-attribute 'linum nil :height 100))
 (provide 'init-linum)
 ;;; init-linum.el ends here

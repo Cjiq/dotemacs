@@ -1,10 +1,12 @@
 ;; code goes here
 
 (require 'org)
+(require 'org-bullets)
 (eval-after-load "org"
   '(require 'ox-md nil t))
-;; Use org indent mode for nicer indentation
-(org-indent-mode)
+
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)
+                           (org-indent-mode)))
 
 (add-to-list 'ac-modes 'org-mode)
 (setq
@@ -26,14 +28,14 @@
               (1 (progn (compose-region (match-beginning 1) (match-end 1) "✔")
                         nil)))))
 ;; Pretty bullets
-(use-package org-bullets
-  :ensure t
-  :init (add-hook 'org-mode-hook 'org-bullets-mode))
-(use-package org
-  :init
-  (font-lock-add-keywords 'org-mode
-                          '(("^ +\\([-*]\\) "
-                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•")))))))
+; (use-package org-bullets
+;   :ensure t
+;   :init (add-hook 'org-mode-hook 'org-bullets-mode))
+; (use-package org
+;   :init
+;   (font-lock-add-keywords 'org-mode
+;                           '(("^ +\\([-*]\\) "
+;                              (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•")))))))
 
 ;; Latex settings
 ;; (setenv "PATH" (concat "/Library/TeX/texbin" (getenv "PATH")))

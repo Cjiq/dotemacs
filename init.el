@@ -95,11 +95,11 @@
 (scroll-bar-mode -1) ;; Disable scrollbars
 (setq ns-use-srgb-colorspace nil) ;; Fix sRGB colors
 
-(setq default-frame-alist ;; Fix colors for new frames
-      (append default-frame-alist
-       '((foreground-color . "#272821")
- (background-color . "#F8F8F2")
- )))
+; (setq default-frame-alist ;; Fix colors for new frames
+;       (append default-frame-alist
+;        '((foreground-color . "#272821")
+;  (background-color . "#F8F8F2")
+;  )))
 (add-to-list 'default-frame-alist 
  '(cursor-color . "#FFF"))
 

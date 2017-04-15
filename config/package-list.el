@@ -21,6 +21,7 @@ helm-emmet
 magit
 neotree
 org
+org-bullets
 ox-reveal
 ox-twbs
 php-auto-yasnippets

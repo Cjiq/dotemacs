@@ -1,3 +1,4 @@
+(require 'color-theme)
 (load-theme 'monokai t)
 
 (provide 'init-theme)
