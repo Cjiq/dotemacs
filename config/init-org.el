@@ -56,55 +56,15 @@
 (setq org-latex-to-pdf-process '("texi2dvi --pdf --clean --verbose --batch %f"))
 (setq org-latex-create-formula-image-program 'dvipng)
 (setq org-export-latex-listings t)
-(add-to-list 'org-latex-classes
-             '("article-class"
-               "\\documentclass{article}
-              \\usepackage[usenames]{color}
-              \\usepackage{amsmath}
-              \\usepackage[mathscr]{eucal}
-              \\usepackage[utf8]{inputenc}
-              \\usepackage[version=4]{mhchem}
-              \\usepackage[T1]{fontenc}
-              \\usepackage{graphicx}
-              \\usepackage[normalem]{ulem}
-              \\usepackage{textcomp}
-              \\usepackage{marvosym}
-              \\usepackage{wasysym}
-              \\usepackage{latexsym}
-              \\usepackage{amssymb}
-              \\usepackage{pdftexcmds}
-             "
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-(add-to-list 'org-latex-classes
-             '("ReportLTU"
-               "\\documentclass{/Users/Cjiq/.emacs.d/config/ReportLTU}
-                [NO-DEFAULT-PACKAGES]
-                [PACKAGES]
-                [EXTRA]
-                "
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-(add-to-list 'org-latex-classes
-             '("LTU_two_column"
-               "\\documentclass{/Users/Cjiq/Dropbox/Latex/LTU_two_column}
-                [NO-DEFAULT-PACKAGES]
-                [PACKAGES]
-                [EXTRA]
-                "
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
 ;; Fix image size
 (setq org-image-actual-width nil)
+
+;; ox-reveal
+(require 'ox-reveal)
+(setq org-reveal-root "file://~/org/reveal.js")
+;; ox-twbs
 (require 'ox-twbs)
+
 (provide 'init-org)
 ;;; init-org.el ends here
