@@ -19,6 +19,8 @@ tramp
 # Org-mode
 .org-id-locations
 *_archive
+!snippets/
+!snippets/*
 
 # flymake-mode
 *_flymake.*

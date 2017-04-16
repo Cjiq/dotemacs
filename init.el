@@ -81,6 +81,7 @@
 (require 'init-powerline)
 (require 'init-web)
 (require 'init-spelling)
+(require 'init-yasnippet)
 (require 'bindings)
 ;;(require 'init-elpy)
 ;; (require 'init-arduino-mode)

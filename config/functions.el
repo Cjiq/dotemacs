@@ -88,6 +88,15 @@ Repeated invocations toggle between the two most recently open buffers."
   (interactive "p*")
   (increment-number-decimal (if arg (- arg) -1)))
 
+(defun insert-current-date ()
+  "Insert current date."
+  (interactive)
+    (shell-command-to-string "echo -n $(date +%Y-%m-%d)"))
+(defun insert-directory-name ()
+  "Insert the current directory name only."
+  (interactive)
+  (file-name-nondirectory
+           (directory-file-name default-directory)))
 
 (provide 'functions)
 ;;; functions.el ends here
