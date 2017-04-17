@@ -27,15 +27,27 @@
              ("^\\*+ \\(DONE\\) "
               (1 (progn (compose-region (match-beginning 1) (match-end 1) "✔")
                         nil)))))
-;; Pretty bullets
-; (use-package org-bullets
-;   :ensure t
-;   :init (add-hook 'org-mode-hook 'org-bullets-mode))
-; (use-package org
-;   :init
-;   (font-lock-add-keywords 'org-mode
-;                           '(("^ +\\([-*]\\) "
-;                              (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•")))))))
+
+(defvar org-default-tasks-file "~/personal/tasks.org")
+
+;; Howard Abrams smart functions
+(defun ha/first-header ()
+    (goto-char (point-min))
+    (search-forward-regexp "^\* ")
+    (beginning-of-line 1)
+    (point))
+
+;; Sync Google Tasks
+(defun ha/load-org-tasks ()
+   (interactive)
+   (shell-command (format "/usr/local/bin/michel-orgmode --pull --orgfile %s" org-default-tasks-file))
+   (find-file org-default-tasks-file)
+   (ha/first-header)
+   (add-hook 'after-save-hook 'ha/save-org-tasks t t))
+
+(defun ha/save-org-tasks ()
+   (save-buffer)
+   (shell-command (format "/usr/local/bin/michel-orgmode --push --orgfile %s &> /dev/null" org-default-tasks-file)))
 
 ;; Latex settings
 ;; (setenv "PATH" (concat "/Library/TeX/texbin" (getenv "PATH")))

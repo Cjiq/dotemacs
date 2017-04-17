@@ -12,6 +12,7 @@
 (setq mac-right-option-modifier nil)
 
 (define-key evil-normal-state-map "\C-p" 'helm-for-files)
+(define-key evil-insert-state-map "\C-y" 'yas-expand)
 
 ;; evil-leader bindings
 (evil-leader/set-key
